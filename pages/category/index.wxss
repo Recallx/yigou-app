@@ -1,1 +1,19 @@
-/* pages/category/index.wxss */
+.goods_index {
+  height: calc(100vh - 90rpx);
+  overflow: hidden;
+  display: flex;
+}
+.goods_index .goods_left_menu {
+  width: 160rpx;
+}
+.goods_index .goods_left_menu .menu {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_index .goods_left_menu .active {
+  color: var(--themeColor);
+  background-color: #fff;
+  border-left: 3px solid var(--themeColor);
+}

@@ -1,1 +1,28 @@
+<!-- 搜索部分 -->
 <Searchinput></Searchinput>
+<!-- 左右结构 -->
+<view class="goods_index">
+    <!-- 左侧 -->
+    <scroll-view scroll-y class="goods_left_menu">
+        <view class="menu {{currentIndex===index? 'active' : ''}}" wx:for="{{leftDatalist}}" wx:key="*this">
+            {{item}}
+        </view>
+    </scroll-view>
+    <!-- 右侧 -->
+    <scroll-view class="goods_right_menu">
+        <view class="goods_title">
+            <text>/</text>
+            <text>电视</text>
+            <text>/</text>
+        </view>
+        <!-- 下部分 -->
+        <view class="goods_meun">
+            <navigator class="goods_nav">
+                <image class=""/>
+                  <text class="">
+                      
+                  </text>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>
