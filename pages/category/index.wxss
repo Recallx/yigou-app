@@ -17,3 +17,27 @@
   background-color: #fff;
   border-left: 3px solid var(--themeColor);
 }
+.goods_index .goods_right_menu {
+  flex: 1;
+}
+.goods_index .goods_right_menu .goods_right_index .goods_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_index .goods_right_menu .goods_right_index .goods_title .goods_top_title {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.goods_index .goods_right_menu .goods_right_index .goods_meun {
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods_index .goods_right_menu .goods_right_index .goods_meun .goods_nav {
+  width: 33.33%;
+  text-align: center;
+}
+.goods_index .goods_right_menu .goods_right_index .goods_meun .goods_nav image {
+  width: 60%;
+}

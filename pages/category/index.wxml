@@ -4,25 +4,41 @@
 <view class="goods_index">
     <!-- 左侧 -->
     <scroll-view scroll-y class="goods_left_menu">
-        <view class="menu {{currentIndex===index? 'active' : ''}}" wx:for="{{leftDatalist}}" wx:key="*this">
+        <view 
+        class="menu {{currentIndex===index? 'active' : ''}}" 
+        wx:for="{{leftDatalist}}" 
+        wx:key="*this"
+        bindtap="handleMenuTap"
+        data-index="{{index}}"
+        >
             {{item}}
         </view>
     </scroll-view>
     <!-- 右侧 -->
-    <scroll-view class="goods_right_menu">
-        <view class="goods_title">
-            <text>/</text>
-            <text>电视</text>
-            <text>/</text>
-        </view>
-        <!-- 下部分 -->
-        <view class="goods_meun">
-            <navigator class="goods_nav">
-                <image class=""/>
-                  <text class="">
-                      
-                  </text>
-            </navigator>
+    <scroll-view scroll-y scroll-top="{{scrolltop}}" class="goods_right_menu">
+        <view class="goods_right_index" 
+        wx:for="{{rightDatalist}}" 
+        wx:for-index="index1" 
+        wx:for-item="item1"
+        wx:key="index1">
+            <view class="goods_title">
+                <text class="setdsfs">/</text>
+                <text class="goods_top_title">{{item1.cat_name}}</text>
+                <text class="setdsfs">/</text>
+            </view>
+            <!-- 下部分 -->
+            <view class="goods_meun">
+                <navigator class="goods_nav" 
+                wx:for="{{item1.children}}" 
+                wx:for-index="index2" 
+                wx:for-item="item2" 
+                wx:key="cat_id"
+                url="/pages/goods_list/index?cid={{item2.cat_id}}"
+                >
+                    <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+                    <view class="goods_text">{{item2.cat_name}}</view>
+                </navigator>
+            </view>
         </view>
     </scroll-view>
 </view>
