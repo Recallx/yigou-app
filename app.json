@@ -15,7 +15,7 @@
     "pages/pay/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ff2d4a",
+    "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white",
     "backgroundTextStyle":"dark",

@@ -1,0 +1,33 @@
+// swiper高度
+.index_swiper{
+    swiper{
+        height: 340rpx;
+      }
+}
+// 导航
+.index_nav{
+  display: flex;
+  navigator{
+    flex: 1;
+    padding: 20px;
+  }
+}
+// 楼层
+.index_lou{
+    .index_contenrt{
+      overflow: hidden;
+      navigator{
+        float: left;
+        width: 33.33%;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+      }
+      navigator:nth-last-child(-n + 4){
+        height: 750rpx / 3 * 386 / 232 / 2;
+        border-bottom: 10px solid #fff;
+        image{
+          height: 100%;
+        }
+      }
+    }
+}
