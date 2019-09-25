@@ -1,1 +1,10 @@
-/* pages/goods_detail/index.wxss */
+.goods_swiper {
+  height: 500rpx;
+}
+.goods_swiper .goods_swiper_item {
+  display: flex;
+  justify-content: center;
+}
+.goods_swiper .goods_swiper_item image {
+  width: 60%;
+}

@@ -1,2 +1,11 @@
-<!--components/search/index.wxml-->
-<text>components/search/index.wxml</text>
+<view class="titel">
+    <view class="titel-tab">
+        <view class="top-titel {{cureater===index?'active':''}}" wx:for="{{titleList}}" wx:key="id" bindtap="handletap"
+            data-index="{{index}}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="ygtabs_content">
+        <slot></slot>
+    </view>
+</view>

@@ -1,2 +1,32 @@
-<!--pages/goods_detail/index.wxml-->
-<text>pages/goods_detail/index.wxml</text>
+<!-- 轮播图 -->
+<swiper class="goods_swiper"
+indicator-dots
+circular
+autoplay>
+    <swiper-item wx:for="{{GoodsdetailList.pics}}"
+    wx:key="pics_id"
+     class="goods_swiper_item"
+     bindtap="handleClick">
+        <image mode="aspectFit" src="{{item.pics_mid}}" ></image>
+    </swiper-item>
+</swiper>
+<!-- 详情 -->
+<view class="detail-text">
+    <view class="detail-price">
+        ￥
+    </view>
+    <view class="detail-wenzi">
+        <text class="detail-zi">
+
+        </text>
+        <view class="detail-shoucang">
+            <text class="detail-tubiao">
+
+            </text>
+            <view class="detail-shou">
+
+            </view>
+        </view>
+    </view>
+</view>
+  

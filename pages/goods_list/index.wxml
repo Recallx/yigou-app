@@ -1,2 +1,30 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<Searchinput></Searchinput>
+<search binditemChange="hanldIndex" titleList="{{titleList}}" cureater="{{cureater}}">
+
+  <!-- 列表 -->
+  <view class="ygtabs_content" wx:if="{{cureater===0}}">
+    <navigator class="ygtabs_nav"
+     wx:for="{{goodsList}}"
+      wx:key="goods_id"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+      >
+      <view class="ygtaba_image">
+        <image mode="widthFix" src="{{item.goods_small_logo || 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2987780088,1348811456&fm=26&gp=0.jpg'}}"></image>
+      </view>
+      <view class="ygtaba_text">
+        <view class="ygtaba_wenzi">
+          {{item.goods_name}}
+        </view>
+        <view class="ygtaba_price">
+          ￥{{item.goods_price}}
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:elif="{{cureater===1}}">
+    1
+  </view>
+  <view wx:else>
+    2
+  </view>
+</search>

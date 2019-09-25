@@ -1,1 +1,18 @@
-/* components/search/index.wxss */
+
+.titel{}
+.titel-tab{
+    display: flex;
+    height: 90rpx;
+    border: 1px solid #ccc;
+}
+.top-titel{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.active{
+    color: var(--themeColor);
+    border-bottom: 1px solid var(--themeColor);
+}
