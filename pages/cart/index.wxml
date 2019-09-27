@@ -1,2 +1,81 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view wx:if="{{!address}}" class="button">
+    <button class="tianjia" bindtap="handlButton" type="primary" plain>添加收货地址</button>
+</view>
+<view wx:else class="shouhuoren">
+    <view class="text">
+        <view>
+            收货人:{{address.userName}}
+        </view>
+        <view>
+            {{address.detailInfodz}}
+        </view>
+    </view>
+    <view class="Phone">
+        {{address.telNumber}}
+    </view>
+</view>
+<!-- 购物车 -->
+<view class="xiabufen">
+    <view class="gouwuche">
+        购物车
+    </view>
+    <!-- 商品项 -->
+    <view class="xiang" wx:if="{{carts.length!=0}}">
+        <view class="gouwuxiang" wx:for="{{carts}}" wx:key="goods_id">
+            <!-- 复选框 -->
+            <view class="checked">
+                <checkbox-group bindchange="handlChecked" data-index="{{index}}" data-options="">
+                    <checkbox checked="{{item.checked}}">
+                    </checkbox>
+                </checkbox-group>
+            </view>
+            <!-- image -->
+            <view class="image">
+                <image mode="widthFix"
+                    src="{{item.goods_small_logo}}">
+                </image>
+            </view>
+            <!-- 商品信息 -->
+            <view class="shangping">
+                <view class="xianqing">
+                    {{item.goods_name}}
+                </view>
+                <view class="jiaqianfen">
+                    <view class="price">
+                        ￥{{item.goods_price}}
+                    </view>
+                    <view class="shuliang">
+                        <view class="num" bindtap="hanldquantity" data-index="{{index}}" data-operation="{{-1}}">-</view>
+                        <view class="number">{{item.num}}</view>
+                        <view class="num" bindtap="hanldquantity" data-index="{{index}}" data-operation="{{1}}">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <image wx:else src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=414958469,2308531002&fm=26&gp=0.jpg" mode="widthFix" ></image>    
+</view>
+<!-- 底部工具 -->
+<view class="dibu">
+    <!-- 全选 -->
+    <view class="xuan">
+        <checkbox-group bindchange="">
+            <checkbox checked="{{allChecked}}">
+                全选
+            </checkbox>
+        </checkbox-group>
+    </view>
+    <!-- 计算 -->
+    <view class="jisuan">
+        <view class="price">
+            合计：<text class="pricesde">￥{{totalPrice}}</text>
+        </view>
+          <view>
+              包含运费
+          </view>
+    </view>
+    <!-- 结算 -->
+    <view class="jiesuan" bindtap="handlclose">
+        结算({{totalNum}})
+    </view>
+</view>

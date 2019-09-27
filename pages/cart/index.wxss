@@ -1,1 +1,125 @@
-/* pages/cart/index.wxss */
+.tianjia {
+  width: 60%;
+  margin: 20rpx auto;
+}
+.shouhuoren {
+  display: flex;
+  padding: 20rpx;
+  color: black;
+}
+.shouhuoren .text {
+  flex: 2;
+}
+.shouhuoren .Phone {
+  flex: 1;
+  text-align: right;
+}
+.xiabufen .gouwuche {
+  display: flex;
+  padding: 20rpx;
+  color: var(--themeColor);
+  font-size: 36rpx;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  font-weight: 600;
+}
+.xiang .gouwuxiang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+.xiang .gouwuxiang .checked {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xiang .gouwuxiang .image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xiang .gouwuxiang .image image {
+  width: 80%;
+}
+.xiang .gouwuxiang .shangping {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.xiang .gouwuxiang .shangping .xianqing {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen .price {
+  color: var(--themeColor);
+  font-size: 36rpx;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen .shuliang {
+  display: flex;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen .shuliang view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33rpx;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen .shuliang .num {
+  border: 1px solid #ccc;
+  width: 60rpx;
+  height: 60rpx;
+}
+.xiang .gouwuxiang .shangping .jiaqianfen .shuliang .number {
+  margin: 0 20rpx;
+}
+.dibu {
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border: 1px solid #ccc;
+  display: flex;
+}
+.dibu .xuan {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dibu .jisuan {
+  flex: 6;
+  font-weight: 500;
+  text-align: right;
+  margin-right: 10rpx;
+}
+.dibu .jisuan .price {
+  font-size: 30rpx;
+}
+.dibu .jisuan .price .pricesde {
+  font-size: 36rpx;
+  color: var(--themeColor);
+  margin-left: 5rpx;
+}
+.dibu .jiesuan {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  font-size: 36rpx;
+}

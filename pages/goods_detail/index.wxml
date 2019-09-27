@@ -1,32 +1,59 @@
 <!-- 轮播图 -->
-<swiper class="goods_swiper"
-indicator-dots
-circular
-autoplay>
-    <swiper-item wx:for="{{GoodsdetailList.pics}}"
-    wx:key="pics_id"
-     class="goods_swiper_item"
-     bindtap="handleClick">
-        <image mode="aspectFit" src="{{item.pics_mid}}" ></image>
+<swiper class="goods_swiper" indicator-dots circular autoplay>
+    <swiper-item wx:for="{{GoodsdetailList.pics}}" wx:key="pics_id" class="goods_swiper_item" bindtap="handleClick"
+        data-current="{{item.pics_mid_url}}">
+        <image mode="aspectFit" src="{{item.pics_mid_url}}"></image>
     </swiper-item>
 </swiper>
 <!-- 详情 -->
-<view class="detail-text">
-    <view class="detail-price">
-        ￥
-    </view>
+<view class="detail-price">
+    ￥{{GoodsdetailList.goods_price}}
+</view>
+<view class="detail_name">
     <view class="detail-wenzi">
-        <text class="detail-zi">
-
-        </text>
-        <view class="detail-shoucang">
-            <text class="detail-tubiao">
-
-            </text>
-            <view class="detail-shou">
-
-            </view>
+        {{GoodsdetailList.goods_name}}
+    </view>
+    <view class="detail-shoucang">
+        <text class="iconfont icon-shoucang"></text>
+        <view class="detail-shou">
+            收藏
         </view>
     </view>
 </view>
-  
+<!-- 图文详情 -->
+<view class="detail_tu">
+    <view class="tuwen">
+        图文详情
+    </view>
+    <view class="fuwenben">
+        <rich-text class="" nodes="{{GoodsdetailList.goods_introduce}}">
+        </rich-text>
+    </view>
+</view>
+<!-- 底部工具栏 -->
+<view class="detail_bottom">
+    <view class="toll_item">
+        <button open-type="contact"></button>
+        <text class="iconfont icon-kefu"></text>
+        <view>
+            客服
+        </view>
+    </view>
+    <view class="toll_item">
+        <button open-type="share" ></button>
+        <text class="iconfont icon-yixianshi-"></text>
+        <view>
+            分享
+        </view>
+    </view>
+    <navigator class="toll_item" open-type="switchTab" url="/pages/cart/index">
+        <text class="iconfont icon-gouwuche"></text>
+        <view class="tool_name">购物车</view>
+    </navigator>
+    <view bindtap="handleCartAdd" class="tool_item btn_cart">
+        加入购物车
+    </view>
+    <view class="tool_item btn_buy">
+        立即购买
+    </view>
+</view>
