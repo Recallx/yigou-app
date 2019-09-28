@@ -76,6 +76,6 @@
     </view>
     <!-- 结算 -->
     <view class="jiesuan" bindtap="handlclose">
-        结算({{totalNum}})
+        立即购买({{totalNum}})
     </view>
 </view>

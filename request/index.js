@@ -3,6 +3,17 @@
 let requestTimes = 0
 
 export const request = (params) => {
+
+
+    // 判断要不要带上请求
+    let header = {}
+    if(params.url.includes("/my/")){
+        header["Authorization"] = wx.getStorageSync("token");
+    }
+
+
+
+
     // 当调用一次request就加载多次
     requestTimes++
     // 显示遮罩层
@@ -15,6 +26,7 @@ export const request = (params) => {
         wx.request({
             ...params,
             url: baseUrl + params.url,
+            header:{...header,...params.header},
             success: (result) => {
                 resolve(result)
             },
@@ -101,6 +113,36 @@ export const showToast = (params) =>{
             mask: false,
             success: (result) => {
                 resolve(result)
+            }
+        });
+          
+    })
+}
+// 登录
+export const login = () =>{
+    return new Promise ((resolve,reject)=>{
+        wx.login({
+            timeout:10000,
+            success: (result) => {
+                resolve(result)
+            },
+            fail:(err)=>{
+                reject(err)
+            }
+        });
+          
+    })
+}
+// 微信支付
+export const frequestPaymentff = (pay) =>{
+    return new Promise((resolve,reject) =>{
+        wx.requestPayment({
+            ...pay,
+            success: (result) => {
+                resolve(result)
+            },
+            fail: (err) => {
+                reject(err)
             }
         });
           

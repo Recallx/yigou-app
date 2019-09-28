@@ -1,2 +1,1 @@
-<!--pages/auth/index.wxml-->
-<text>pages/auth/index.wxml</text>
+<button plain type="primary" open-type="getUserInfo" bindgetuserinfo="handleGetuserinfo">点击授权</button>
