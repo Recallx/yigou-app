@@ -50,7 +50,7 @@ Page({
     // 准备预支付
     const res = await request({url:"/my/orders/req_unifiedorder",method:"post",data: {order_number}})
     // 将pay结构出来
-    const {pay} = res.data.message
+    const {pay} = res.data.message;
     // 调用内置微信支付API
     await frequestPaymentff(pay)
     // 查看订单状态

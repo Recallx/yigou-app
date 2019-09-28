@@ -1,2 +1,11 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="index">
+    <view class="shang">
+        <input value="{{ValueInput}}" bindinput="handlClick" type="text" />
+        <button wx:if="{{isFes}}" class="button" bindtap="hanldDel">取消</button>
+    </view>
+    <view class="xia">
+        <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="list" wx:for="{{list}}" wx:key="goods_id">
+            {{item.goods_name}}
+        </navigator>
+    </view>
+</view>

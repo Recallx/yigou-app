@@ -1,1 +1,39 @@
-/* pages/search/index.wxss */
+.index {
+  padding: 20rpx;
+  background-color: #dedede;
+}
+.index .shang {
+  height: 60rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.index .shang input {
+  flex: 1;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+.index .shang .button {
+  width: 15%;
+  font-size: 28rpx;
+  height: 100%;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rpx;
+}
+.index .xia {
+  margin-top: 30rpx;
+  height: -30vh;
+  overflow: auto;
+}
+.index .xia .list {
+  background-color: #fff;
+  padding: 15rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
